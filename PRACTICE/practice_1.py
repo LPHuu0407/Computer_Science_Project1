@@ -145,4 +145,4 @@ def main():
 		population[0].fitness))
 
 if __name__ == '__main__':
-	main()hhh
+	main()
