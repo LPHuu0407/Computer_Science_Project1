@@ -6,10 +6,10 @@ import random
 POPULATION_SIZE = 100
 
 # Valid genes
-GENES = '''abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789,.-;:_!"#%&/()=?@${[]}'''
+GENES = '''bacdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789,.-;:_!"#%&/()=?@${[]}'''
 
 # Target string to be generated
-TARGET = "Computer Science 2021"
+TARGET = str(input("Enter target: "))
 
 class Individual(object):
 	# Class representing individual in population
