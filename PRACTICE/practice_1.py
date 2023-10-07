@@ -1,17 +1,15 @@
 # Python3 program to create target string, starting from
 # random string using Genetic Algorithm
-
 import random
 
 # Number of individuals in each generation
 POPULATION_SIZE = 100
 
 # Valid genes
-GENES = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP
-QRSTUVWXYZ 1234567890, .-;:_!"#%&/()=?@${[]}'''
+GENES = '''abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789,.-;:_!"#%&/()=?@${[]}'''
 
 # Target string to be generated
-TARGET = "I love GeeksforGeeks"
+TARGET = "Computer Science 2021"
 
 class Individual(object):
 	# Class representing individual in population
@@ -39,7 +37,6 @@ class Individual(object):
 	def mate(self, par2):
 		# Perform mating and produce new offspring
 		# Thực hiện giao phối và sinh ra con cái mới
-
 		# Chromosome for offspring
         # Nhiễm sắc thể cho con cái
 
@@ -75,7 +72,8 @@ class Individual(object):
 		return Individual(child_chromosome)
 
 	def cal_fitness(self):
-		# Calculate fitness score, it is the number of characters in string which differ from target string.
+		# Calculate fitness score, it is the number of
+		#  characters in string which differ from target string.
 		# Tính điểm thể lực, đó là số ký tự trong chuỗi khác với chuỗi đích.
 		global TARGET
 		fitness = 0
