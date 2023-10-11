@@ -6,7 +6,7 @@ import random
 POPULATION_SIZE = 100
 
 # Valid genes
-GENES = '''bacdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789,.-;:_!"#%&/()=?@${[]}'''
+GENES = '''abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789,.-;:_!"#%&/()=?@${[]}'''
 
 # Target string to be generated
 TARGET = str(input("Enter target: "))
