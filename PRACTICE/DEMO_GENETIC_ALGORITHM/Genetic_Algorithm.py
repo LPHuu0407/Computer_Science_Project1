@@ -16,16 +16,19 @@ class Individual(object):
     def __init__(self, Value_Chromosome):
         self.chromosome = Value_Chromosome
         self.fitness = self.Fitness()
+    
     # Hàm 'Genetic_Mutation' được dùng tạo ra các gen đột biến
     def Genetic_Mutation(self):
         global Genes
         Gen = random.choice(Genes)
         return Gen
+    
     # Tạo ra nhiễm sắc thể hoặc một chuỗi
     def Create_Chromosome(self):
         global Target
         Chromosome_Len = len(Target)
         return [self.Genetic_Mutation() for _ in range(Chromosome_Len)]
+    
     # Thực hiện giao phối, sinh ra con cái từ 2 nhiễm sắc thể
     def Mating(self, Parents):
         Child_Chromosome = [] # Tạo mảng chứa các nhiễm sắc thể con
@@ -40,6 +43,7 @@ class Individual(object):
                 Child_Chromosome.append(self.Genetic_Mutation())
         
         return Individual(Child_Chromosome) # Tạo ra cá thể mới
+    
     # Đánh giá độ thích nghi của nhiễm sắc thể, so với chuỗi mục tiêu
     def Fitness(self):
         global Target

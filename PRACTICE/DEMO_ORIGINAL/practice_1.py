@@ -94,8 +94,8 @@ def main():
 	# create initial population
     # tạo dân số ban đầu
 	for _ in range(POPULATION_SIZE):
-				gnome = Individual.create_gnome()
-				population.append(Individual(gnome))
+		gnome = Individual.create_gnome()
+		population.append(Individual(gnome))
 
 	while not found:
 
