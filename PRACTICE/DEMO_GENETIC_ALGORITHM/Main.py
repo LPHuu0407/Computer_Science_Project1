@@ -38,5 +38,4 @@ def Main():
         Generation += 1
     print("Generation: {}\tString: {}\tFitness: {}".\
 			format(Generation,"".join(Population[0].chromosome),Population[0].fitness))
-
 Main()
