@@ -11,8 +11,7 @@ Target = str(input("Enter target: "))
 # Lớp 'Individual'
 # Nhiệm vụ tìm ra cá thể tốt nhất
 class Individual(object):
-    # Hàm __init__ đại diện cho cá thể 
-    # trong quần thể các chuỗi mục tiêu
+    # Hàm __init__ đại diện cho cá thể trong quần thể chứa chuỗi mục tiêu
     def __init__(self, Value_Chromosome):
         self.chromosome = Value_Chromosome
         self.fitness = self.Fitness()
