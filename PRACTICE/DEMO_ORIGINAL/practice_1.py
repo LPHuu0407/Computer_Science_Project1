@@ -130,17 +130,13 @@ def main():
 		population = new_generation
 
 		print("Generation: {}\tString: {}\tFitness: {}".\
-			format(generation,
-			"".join(population[0].chromosome),
-			population[0].fitness))
+			format(generation,"".join(population[0].chromosome), population[0].fitness))
 
 		generation += 1
 
 	
 	print("Generation: {}\tString: {}\tFitness: {}".\
-		format(generation,
-		"".join(population[0].chromosome),
-		population[0].fitness))
+		format(generation,"".join(population[0].chromosome), population[0].fitness))
 
 if __name__ == '__main__':
 	main()
