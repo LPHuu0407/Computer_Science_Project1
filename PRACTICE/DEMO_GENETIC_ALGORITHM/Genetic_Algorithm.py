@@ -29,7 +29,8 @@ class Individual(object):
         return [self.Genetic_Mutation() for _ in range(Chromosome_Len)]
     # Thực hiện giao phối, sinh ra con cái từ 2 nhiễm sắc thể
     def Mating(self, Parents):
-        Child_Chromosome = [] # Tạo mảng chứa các nhiễm sắc thể con
+        # Tạo mảng chứa các nhiễm sắc thể con
+        Child_Chromosome = [] 
         for Parent_1, Parent_2 in zip(self.chromosome, Parents.chromosome):
             # Tạo xác suất ngẫu nhiên
             Probability = random.random()

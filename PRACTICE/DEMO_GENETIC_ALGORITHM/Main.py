@@ -7,12 +7,13 @@ def Main():
     Generation = 1
     Found = False
     Population = []
-    # Khởi tạo quần thể ban đầu
+    # Initiialization
     for _ in range(Population_Size):
         # Gọi hàm "Create_Chromosome" để tạo các nhiễm sắc thể
         Chromosome = Individual.Create_Chromosome()
         # Thêm các nhiễm sắc thể vào mảng "Population"
         Population.append(Individual(Chromosome)) 
+    # Natural Selection
     while not Found:
         # Sắp xếp các nhiễm sắc thể theo thứ tự tăng dần dựa trên điểm thích nghi
         Population = sorted(Population, key = lambda x:x.fitness)
@@ -38,4 +39,5 @@ def Main():
         Generation += 1
     print("Generation: {}\tString: {}\tFitness: {}".\
 			format(Generation,"".join(Population[0].chromosome),Population[0].fitness))
-Main()
+if __name__ == '__main__':
+    Main()
