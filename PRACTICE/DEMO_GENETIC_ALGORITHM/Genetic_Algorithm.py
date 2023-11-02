@@ -1,11 +1,12 @@
 # Gọi thư viện 'random', thư viện 'random' 
 # hỗ trợ các hàm trả về các số, chuỗi ngẫu nhiên 
 import random
-# Biến 'Population_Size' tạo một quần thể 
-# có số lượng xác định
-Population_Size = 100
+# Biến 'Population_Size' tạo một quần thể có số lượng xác định
+Population_Size : int = 100
 # Khai báo 'Genes'
-Genes = '''abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789,.-;:_!"#%&/()=?@${[]}'''
+Genes = '''aáàảãạâấầẩẫậăắằẳẵặ bcd đ eéèẻẽẹ êếềểễệ fgh iíìỉĩị jklmn oóòỏõọơớờởỡợôốồổỗộ pqrst uúùủũụưứừửữự vwx yýỳỷỹỵ z 
+        AÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶ BCD Đ EÉÈẺẼẸ ÊẾỀỂỄỆ FGH IÍÌỈĨỊ JKLMN OÓÒỎÕỌƠỚỜỞỠỢÔỐỒỔỖỘ PQRST UÚÙỦŨỤƯỨỪỬỮỰ VWX YÝỲỶỸỴ Z
+        0123456789,.-;:_!"#%&/()=?@${[]}'''
 # 'Target' sẽ chứa chuỗi mục tiêu muốn đạt được
 Target = str(input("Enter target: "))
 # Lớp 'Individual'
