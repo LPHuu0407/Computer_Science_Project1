@@ -29,7 +29,7 @@ class Individual(object):
         Chromosome_Len = len(Target)
         return [self.Genetic_Mutation() for _ in range(Chromosome_Len)]
     # Thực hiện giao phối, sinh ra con cái từ 2 nhiễm sắc thể
-    def Mating(self, Parents):
+    def Crossover(self, Parents):
         # Tạo mảng chứa các nhiễm sắc thể con
         Child_Chromosome = [] 
         for Parent_1, Parent_2 in zip(self.chromosome, Parents.chromosome):

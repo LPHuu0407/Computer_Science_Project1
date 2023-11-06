@@ -31,7 +31,7 @@ def Main():
         for _ in range(Size):
             Parent_1 = random.choice(Population[:50])
             Parent_2 = random.choice(Population[:50])
-            Child = Parent_1.Mating(Parent_2)
+            Child = Parent_1.Crossover(Parent_2)
             New_Generation.append(Child)
         Population = New_Generation
         print("Generation: {}\tString: {}\tFitness: {}".\
