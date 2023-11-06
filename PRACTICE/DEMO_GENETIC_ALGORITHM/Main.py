@@ -12,7 +12,7 @@ def Main():
         # Gọi hàm "Create_Chromosome" để tạo các nhiễm sắc thể
         Chromosome = Individual.Create_Chromosome()
         # Thêm các nhiễm sắc thể vào mảng "Population"
-        Population.append(Individual(Chromosome)) 
+        Population.append(Individual(Chromosome))
     # Natural Selection
     while not Found:
         # Sắp xếp các nhiễm sắc thể theo thứ tự tăng dần dựa trên điểm thích nghi
