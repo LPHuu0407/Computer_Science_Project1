@@ -50,7 +50,7 @@ class Individual(object):
     def Fitness(self):
         global Target
         fitness = 0
-        for gs, gt in zip(self.chromosome, Target):
-            if gs != gt:
+        for fitness_Chromosome, fitness_Target in zip(self.chromosome, Target):
+            if fitness_Chromosome != fitness_Target:
                 fitness += 1
         return fitness
