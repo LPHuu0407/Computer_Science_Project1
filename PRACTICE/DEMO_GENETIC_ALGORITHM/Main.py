@@ -13,7 +13,7 @@ def Main():
         Chromosome = Individual.Create_Chromosome()
         # Thêm các nhiễm sắc thể vào mảng "Population"
         Population.append(Individual(Chromosome))
-    # Natural Selection
+    # Selection
     while not Found:
         # Sắp xếp các nhiễm sắc thể theo thứ tự tăng dần dựa trên điểm thích nghi
         Population = sorted(Population, key = lambda x:x.fitness)
@@ -25,9 +25,11 @@ def Main():
         New_Generation = []
         # Thực hiện quá trình chuyển 10% cá thể từ quần thể hiện hành sang thế thệ tiếp theo
         Size = int((10 * Population_Size) / 100)
+        # Thêm 10% chuỗi của quần thể cũ vào quần thể mới bằng hàm extend()
         New_Generation.extend(Population[:Size])
         # 50% cá thể có độ thích nghi cao nhất sẽ được giao phối và sinh ra con cái
         Size = int((90 * Population_Size) / 100)
+        # Crossover
         for _ in range(Size):
             Parent_1 = random.choice(Population[:50])
             Parent_2 = random.choice(Population[:50])
