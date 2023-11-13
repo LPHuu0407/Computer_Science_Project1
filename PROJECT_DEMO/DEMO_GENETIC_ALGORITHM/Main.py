@@ -42,4 +42,4 @@ def Main():
     print("Generation: {}\tString: {}\tFitness: {}".\
 			format(Generation,"".join(Population[0].chromosome),Population[0].fitness))
 if __name__ == '__main__':
-    Main()huu
+    Main()
