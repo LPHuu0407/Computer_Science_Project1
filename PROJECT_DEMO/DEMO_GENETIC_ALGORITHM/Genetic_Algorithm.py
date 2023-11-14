@@ -1,13 +1,12 @@
-# Gọi thư viện 'random', thư viện 'random' 
-# hỗ trợ các hàm trả về các số, chuỗi ngẫu nhiên 
+# Import the “random” module, the “random” is module supports return random numbers, characters
 import random
-# Biến 'Population_Size' tạo một quần thể có số lượng xác định
+# The variable 'Population_Size' creates a population of the specified number
 Population_Size : int = 100
-# Khai báo 'Genes'
+# Declare variable 'Genes'
 Genes = '''aáàảãạâấầẩẫậăắằẳẵặ bcd đ eéèẻẽẹ êếềểễệ fgh iíìỉĩị jklmn oóòỏõọơớờởỡợôốồổỗộ pqrst uúùủũụưứừửữự vwx yýỳỷỹỵ z 
         AÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶ BCD Đ EÉÈẺẼẸ ÊẾỀỂỄỆ FGH IÍÌỈĨỊ JKLMN OÓÒỎÕỌƠỚỜỞỠỢÔỐỒỔỖỘ PQRST UÚÙỦŨỤƯỨỪỬỮỰ VWX YÝỲỶỸỴ Z
         0123456789,.-;:_!"#%&/()=?@${[]}'''
-# 'Target' sẽ chứa chuỗi mục tiêu muốn đạt được
+# The variable 'Target' contains the random string to enter
 Target = str(input("Enter target: "))
 # Lớp 'Individual'
 # Nhiệm vụ tìm ra cá thể tốt nhất
