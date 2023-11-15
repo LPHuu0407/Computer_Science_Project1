@@ -3,9 +3,13 @@ import random
 # The variable 'Population_Size' creates a population of the specified number
 Population_Size : int = 100
 # Declare variable 'Genes'
-Genes = '''aáàảãạâấầẩẫậăắằẳẵặ bcd đ eéèẻẽẹ êếềểễệ fgh iíìỉĩị jklmn oóòỏõọơớờởỡợôốồổỗộ pqrst uúùủũụưứừửữự vwx yýỳỷỹỵ z 
-        AÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶ BCD Đ EÉÈẺẼẸ ÊẾỀỂỄỆ FGH IÍÌỈĨỊ JKLMN OÓÒỎÕỌƠỚỜỞỠỢÔỐỒỔỖỘ PQRST UÚÙỦŨỤƯỨỪỬỮỰ VWX YÝỲỶỸỴ Z
-        0123456789,.-;:_!"#%&/()=?@${[]}'''
+Genes = '''aáàảãạâấầẩẫậăắằẳẵặ bcd đ eéèẻẽẹ êếềểễệ
+           fgh iíìỉĩị jklmn oóòỏõọơớờởỡợôốồổỗộ pq
+           rst uúùủũụưứừửữự vwx yýỳỷỹỵ z AÁÀẢÃẠÂẤ
+           ẦẨẪẬĂẮẰẲẴẶ BCD Đ EÉÈẺẼẸ ÊẾỀỂỄỆ FGH IÍÌ
+           ỈĨỊ JKLMN OÓÒỎÕỌƠỚỜỞỠỢÔỐỒỔỖỘ PQRST UÚÙ
+           ỦŨỤƯỨỪỬỮỰ VWX YÝỲỶỸỴ Z0123456789,.-;:_
+           !"#%&/()=?@${[]}'''
 # The variable 'Target' contains the random string to enter
 Target = str(input("Enter target: "))
 class Individual(object):
