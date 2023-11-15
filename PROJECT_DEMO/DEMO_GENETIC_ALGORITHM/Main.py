@@ -1,33 +1,33 @@
 import random
 from Genetic_Algorithm import *
-# Hàm Main()
+# Main Function
 def Main():
     global Population_Size
-    # Khởi tạo thế hệ đâù tiên
+    # Initialize the first generation
     Generation = 1
     Found = False
     Population = []
     # Initiialization
     for _ in range(Population_Size):
-        # Gọi hàm "Create_Chromosome" để tạo các nhiễm sắc thể
+        # Call the function "Create_Chromosome" to create chromosomes
         Chromosome = Individual.Create_Chromosome()
-        # Thêm các nhiễm sắc thể vào mảng "Population"
+        # Add chromosomes to the "Population" array
         Population.append(Individual(Chromosome))
     # Selection
     while not Found:
-        # Sắp xếp các nhiễm sắc thể theo thứ tự tăng dần dựa trên điểm thích nghi
+        # Sort chromosomes in ascending order based on fitness score
         Population = sorted(Population, key = lambda x:x.fitness)
-        # Nếu NST có điểm thích nghi bằng 0, thì đã tìm ra NST mục tiêu
+        # If the chromosome has a fitness score of 0 then the target chromosome has been found
         if Population[0].fitness <= 0:
             Found = True
             break
-        # Nếu chưa tìm ra NST, thì tạo ra con cái mới cho thế hệ mới
+        # Create a new generation and select good individuals into this new position
         New_Generation = []
-        # Thực hiện quá trình chuyển 10% cá thể từ quần thể hiện hành sang thế thệ tiếp theo
+        # Perform a transfer of 10% of individuals from the current population to the next generation
         Size = int((10 * Population_Size) / 100)
-        # Thêm 10% chuỗi của quần thể cũ vào quần thể mới bằng hàm extend()
+        # Add 10% of the old population's strings to the new population using the extend() function
         New_Generation.extend(Population[:Size])
-        # 50% cá thể có độ thích nghi cao nhất sẽ được giao phối và sinh ra con cái
+        # 50% of the 90% of individuals in the current population will undergo 'Crossover'
         Size = int((90 * Population_Size) / 100)
         # Crossover
         for _ in range(Size):

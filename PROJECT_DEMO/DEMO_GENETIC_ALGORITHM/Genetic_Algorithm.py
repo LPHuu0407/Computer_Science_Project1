@@ -8,44 +8,42 @@ Genes = '''aáàảãạâấầẩẫậăắằẳẵặ bcd đ eéèẻẽẹ
         0123456789,.-;:_!"#%&/()=?@${[]}'''
 # The variable 'Target' contains the random string to enter
 Target = str(input("Enter target: "))
-# Lớp 'Individual'
-# Nhiệm vụ tìm ra cá thể tốt nhất
 class Individual(object):
-    # Hàm __init__ đại diện cho cá thể trong quần thể chứa chuỗi mục tiêu
+    # The __init__ function represents an individual in a population
     def __init__(self, Value_Chromosome):
         self.chromosome = Value_Chromosome
         self.fitness = self.Fitness()
     @classmethod
-    # Hàm 'Genetic_Mutation' được dùng tạo ra các gen đột biến
-    def Genetic_Mutation(self):
+    # The 'Gene Mutation' function is used to create mutated genes
+    def Gene_Mutation(self):
         global Genes
         Gen = random.choice(Genes)
         return Gen
     @classmethod
-    # Tạo ra nhiễm sắc thể hoặc một chuỗi
+    # Create chromosomes
     def Create_Chromosome(self):
         global Target
         Chromosome_Len = len(Target)
-        return [self.Genetic_Mutation() for _ in range(Chromosome_Len)]
-    # Thực hiện giao phối, sinh ra con cái từ 2 nhiễm sắc thể
+        return [self.Gene_Mutation() for _ in range(Chromosome_Len)]
+    # Create a new chromosome by the 'Crossover' function
     def Crossover(self, Parents):
-        # Tạo mảng chứa các nhiễm sắc thể con
+        # Create an array containing the child chromosomes
         Child_Chromosome = [] 
         for Parent_1, Parent_2 in zip(self.chromosome, Parents.chromosome):
-            # Tạo xác suất ngẫu nhiên
+            # Generate random probabilities
             Probability = random.random()
-            # Nếu xác suất nhỏ hơn 0.45 thì chèn gen của Parent_1
+            # If probability is less than 0.45, insert Parent_1's gene
             if Probability < 0.45:
                 Child_Chromosome.append(Parent_1)
-            # Nếu xác suất nằm trong khoảng từ 0.45 - 0.90 thì chèn gen của Parent_2
+            # If the probability is between 0.45 - 0.90, insert Parent_2's gene
             elif Probability < 0.90:
                 Child_Chromosome.append(Parent_2)
-            # Trường hợp còn lại
+            # The remaining case is a genetic mutation using the "Gene_Mutation" function
             else: 
-                Child_Chromosome.append(self.Genetic_Mutation())
-        # Tạo ra cá thể mới
+                Child_Chromosome.append(self.Gene_Mutation())
+        # Returns the child chromosome
         return Individual(Child_Chromosome)
-    # Đánh giá độ thích nghi của nhiễm sắc thể, so với chuỗi mục tiêu
+    # Evaluate the fitness of the chromosome, compared to the target sequence
     def Fitness(self):
         global Target
         fitness = 0
