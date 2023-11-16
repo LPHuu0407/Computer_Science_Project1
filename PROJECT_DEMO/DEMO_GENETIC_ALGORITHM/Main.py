@@ -1,4 +1,3 @@
-import random
 from Genetic_Algorithm import *
 # Main Function
 def Main():
